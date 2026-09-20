@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Reina Servano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body {
+      font-family: 'Comfortaa', cursive, sans-serif;
+      min-height: 100vh;
+      background-color: #B6C4F0;
+      color: #2D3748;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .text-heading { color: #1E293B; }
+    .text-subtext { color: #475569; }
+
+    .blob {
+      position: absolute;
+      border-radius: 42% 58% 65% 35% / 42% 44% 56% 58%;
+      filter: blur(24px);
+      opacity: 0.55;
+      background: rgba(167, 139, 250, 0.35);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content-shell {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="flex flex-col justify-between items-center p-4 sm:p-8 relative overflow-hidden">
+  <div class="blob w-72 h-72 top-10 left-8"></div>
+  <div class="blob w-80 h-80 bottom-10 right-12"></div>
+
+  <div class="content-shell w-full max-w-4xl flex flex-col items-center">
+    <header class="w-full max-w-4xl glass-card rounded-2xl px-6 py-4 flex justify-between items-center mb-8 shadow-sm">
+      <div class="flex items-center space-x-3">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="h-10 w-auto object-contain" />
+        <span class="font-bold text-lg text-heading tracking-wide">Reina Servano</span>
+      </div>
+
+      <nav class="hidden sm:flex space-x-6 text-sm font-semibold text-subtext">
+        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+      </nav>
+    </header>
+
+    <main class="w-full max-w-3xl glass-card rounded-3xl p-8 sm:p-10 shadow-lg">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <div class="flex-shrink-0">
+          <img src="Me.jpg" alt="Reina Servano" class="w-40 h-40 object-cover rounded-[2rem] shadow-lg border border-white/50" />
+        </div>
+
+        <div class="flex-1">
+          <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-6">About</h1>
+          <p class="text-base leading-relaxed text-subtext mb-8">
+            I am currently a Junior at UC Davis.
+          </p>
+
+          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-indigo-600 text-white font-bold shadow-md hover:bg-indigo-700 transition-colors">
+            View Resume
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

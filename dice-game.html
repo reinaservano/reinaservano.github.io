@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Game | Reina Servano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+    body {
+      font-family: 'Comfortaa', cursive, sans-serif;
+      min-height: 100vh;
+      background-color: #B6C4F0;
+      color: #2D3748;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .text-heading { color: #1E293B; }
+    .text-subtext { color: #475569; }
+  </style>
+</head>
+<body class="flex flex-col items-center p-4 sm:p-8">
+  <main class="w-full max-w-3xl glass-card rounded-3xl p-8 shadow-lg">
+    <a href="index.html" class="inline-block mb-6 text-sm font-semibold text-indigo-700 hover:text-indigo-900">← Back to Home</a>
+    <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-4">Dice Game</h1>
+    <div class="mb-6 text-subtext">
+      <p class="font-semibold">One-Hot Encoded Dice Game</p>
+    </div>
+
+    <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+      <li>Designed and programmed an FPGA-based dice game of rolling 22, utilizing clocked and clock-enabled Flip-Flops.</li>
+      <li>Built a custom binary-to-hexadecimal display decoder for readable game output.</li>
+      <li>Created an original score tracker-comparator and game turn counter to manage gameplay logic.</li>
+    </ul>
+  </main>
+</body>
+</html>

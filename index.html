@@ -1,12 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Portfolio!</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Import Comfortaa font with multiple weights -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Load Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Global smooth color transitions for theme switching */
+    *, *::before, *::after {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body {
+      font-family: 'Comfortaa', cursive, sans-serif;
+      min-height: 100vh;
+    }
+    
+    /* Light Mode Palette (#B6C4F0 background) */
+    body.light-mode {
+      background-color: #B6C4F0;
+      color: #2D3748;
+    }
+    
+    body.light-mode .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    body.light-mode .text-heading { color: #1E293B; }
+    body.light-mode .text-subtext { color: #475569; }
+
+    /* Dark Mode Palette (#586285 background) */
+    body.dark-mode {
+      background-color: #586285;
+      color: #F1F5F9;
+    }
+
+    body.dark-mode .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode .text-heading { color: #FFFFFF; }
+    body.dark-mode .text-subtext { color: #CBD5E1; }
+
+    .blob {
+      position: absolute;
+      border-radius: 42% 58% 65% 35% / 42% 44% 56% 58%;
+      filter: blur(24px);
+      opacity: 0.55;
+      background: rgba(167, 139, 250, 0.35);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Button Hover Behavior */
+    .interactive-btn {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .interactive-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+    }
+    
+    .interactive-btn:active {
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body>
-    <h1>My name is Reina.</h1>
-    <p>My site is under construction.</p>
+<body class="light-mode flex flex-col justify-between items-center p-4 sm:p-8 relative overflow-hidden">
+  <div class="blob w-72 h-72 top-10 left-8"></div>
+  <div class="blob w-80 h-80 bottom-10 right-12"></div>
+
+  <div class="content-shell w-full max-w-4xl flex flex-col items-center">
+
+  <!-- Navigation Header -->
+  <header class="w-full max-w-4xl glass-card rounded-2xl px-6 py-4 flex justify-between items-center mb-8 shadow-sm">
+    <div class="flex items-center space-x-3">
+      <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="h-10 w-auto object-contain" />
+      <span class="font-bold text-lg text-heading tracking-wide">Reina Servano</span>
+    </div>
+    
+    <nav class="hidden sm:flex space-x-6 text-sm font-semibold text-subtext">
+      <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+      <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+      <a href="#blog" class="hover:text-indigo-400 transition-colors">Blog</a>
+    </nav>
+    
+    <!-- Theme Switcher Button -->
+    <button id="themeToggleBtn" onclick="toggleTheme()" class="interactive-btn px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-semibold hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-800 dark:hover:bg-white shadow">
+      🌙 Dark Mode
+    </button>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="w-full max-w-4xl space-y-8">
+    
+    <!-- Hero Banner -->
+    <section class="glass-card rounded-3xl p-8 sm:p-12 text-center shadow-lg">
+      <h1 class="text-3xl sm:text-5xl font-bold text-heading mb-6 leading-tight">
+        Hello, my name is Reina Servano!
+      </h1>
+      <p class="text-base sm:text-lg text-subtext max-w-2xl mx-auto mb-8 leading-relaxed">
+        This website is under construction!
+      </p>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      
+      <a href="barrel-scanner.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
+        <div class="w-12 h-12 bg-white/80 dark:bg-slate-800/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">
+          🍷
+        </div>
+        <h2 class="text-lg font-bold text-heading mb-2">Dual Axis Barrel Scanner</h2>
+        <p class="text-sm text-subtext leading-relaxed">
+          Barrel Scanner hardware project I worked on as Hardware Lead for the Northwest AI Hub internship.
+        </p>
+      </a>
+
+      <a href="dice-game.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
+        <div class="w-12 h-12 bg-white/80 dark:bg-slate-800/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">
+          🎲
+        </div>
+        <h2 class="text-lg font-bold text-heading mb-2">Dice Game</h2>
+        <p class="text-sm text-subtext leading-relaxed">
+          One-hot encoded FPGA dice game built with custom decode logic, flip-flops, score comparison, and turn tracking.
+        </p>
+      </a>
+
+      <a href="bwsi.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
+        <div class="w-12 h-12 bg-white/80 dark:bg-slate-800/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">
+          🦫
+        </div>
+        <h2 class="text-lg font-bold text-heading mb-2">BWSI EMBSEC TA Labs</h2>
+        <p class="text-sm text-subtext leading-relaxed">
+          Labs I helped create as an Embedded Security TA for MIT Beaver Works Summer Institute Program.
+        </p>
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer class="w-full max-w-4xl text-center py-6 mt-8 text-xs text-subtext font-medium">
+    <a href="mailto:reinaservano@gmail.com" class="font-semibold text-indigo-700 hover:text-indigo-900 underline">Email me at reinaservano@gmail.com</a>
+  </footer>
+
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 rounded-xl shadow-xl transition-all duration-300 transform translate-y-20 opacity-0 text-sm font-semibold pointer-events-none">
+    Copied to clipboard!
+  </div>
+
+  <script>
+    let isDarkMode = false;
+
+    // Toggle between Light (#B6C4F0) and Dark (#586285) modes
+    function toggleTheme() {
+      isDarkMode = !isDarkMode;
+      const body = document.body;
+      const themeBtn = document.getElementById('themeToggleBtn');
+
+      if (isDarkMode) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        themeBtn.textContent = '☀️ Light Mode';
+        showToast('Switched to Dark Mode');
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        themeBtn.textContent = '🌙 Dark Mode';
+        showToast('Switched to Light Mode');
+      }
+    }
+
+    // Display temporary notification toast
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+  </script>
 </body>
 </html>
