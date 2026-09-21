@@ -8,43 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    *, *::before, *::after {
-      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    body {
-      font-family: 'Comfortaa', cursive, sans-serif;
-      min-height: 100vh;
-      background-color: #B6C4F0;
-      color: #2D3748;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    .text-heading { color: #1E293B; }
-    .text-subtext { color: #475569; }
-
-    .blob {
-      position: absolute;
-      border-radius: 42% 58% 65% 35% / 42% 44% 56% 58%;
-      filter: blur(24px);
-      opacity: 0.55;
-      background: rgba(167, 139, 250, 0.35);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .content-shell {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="flex flex-col justify-between items-center p-4 sm:p-8 relative">
   <div class="blob w-72 h-72 top-10 left-8"></div>
@@ -61,6 +26,7 @@
         <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
         <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
       </nav>
+      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
     </header>
 
     <main class="w-full max-w-3xl glass-card rounded-3xl p-8 sm:p-10 shadow-lg">

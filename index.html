@@ -13,79 +13,8 @@
   
   <!-- Load Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <style>
-    /* Global smooth color transitions for theme switching */
-    *, *::before, *::after {
-      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    body {
-      font-family: 'Comfortaa', cursive, sans-serif;
-      min-height: 100vh;
-    }
-    
-    /* Light Mode Palette (#B6C4F0 background) */
-    body.light-mode {
-      background-color: #B6C4F0;
-      color: #2D3748;
-    }
-    
-    body.light-mode .glass-card {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-    
-    body.light-mode .text-heading { color: #1E293B; }
-    body.light-mode .text-subtext { color: #475569; }
-
-    /* Dark Mode Palette (#586285 background) */
-    body.dark-mode {
-      background-color: #586285;
-      color: #F1F5F9;
-    }
-
-    body.dark-mode .glass-card {
-      background: rgba(30, 41, 59, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    body.dark-mode .text-heading { color: #FFFFFF; }
-    body.dark-mode .text-subtext { color: #CBD5E1; }
-
-    .blob {
-      position: absolute;
-      border-radius: 42% 58% 65% 35% / 42% 44% 56% 58%;
-      filter: blur(24px);
-      opacity: 0.55;
-      background: rgba(167, 139, 250, 0.35);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .content-shell {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Button Hover Behavior */
-    .interactive-btn {
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .interactive-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
-    }
-    
-    .interactive-btn:active {
-      transform: translateY(0);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="light-mode flex flex-col justify-between items-center p-4 sm:p-8 relative">
   <div class="blob w-72 h-72 top-10 left-8"></div>
@@ -107,7 +36,7 @@
     </nav>
     
     <!-- Theme Switcher Button -->
-    <button id="themeToggleBtn" onclick="toggleTheme()" class="interactive-btn px-4 py-2 bg-slate-800 text-white rounded-xl text-xs font-semibold hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-800 dark:hover:bg-white shadow">
+    <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()">
       🌙 Dark Mode
     </button>
   </header>
@@ -182,40 +111,5 @@
     Copied to clipboard!
   </div>
 
-  <script>
-    let isDarkMode = false;
-
-    // Toggle between Light (#B6C4F0) and Dark (#586285) modes
-    function toggleTheme() {
-      isDarkMode = !isDarkMode;
-      const body = document.body;
-      const themeBtn = document.getElementById('themeToggleBtn');
-
-      if (isDarkMode) {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        themeBtn.textContent = '☀️ Light Mode';
-        showToast('Switched to Dark Mode');
-      } else {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        themeBtn.textContent = '🌙 Dark Mode';
-        showToast('Switched to Light Mode');
-      }
-    }
-
-    // Display temporary notification toast
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 2500);
-    }
-  </script>
 </body>
 </html>

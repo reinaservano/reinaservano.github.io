@@ -8,28 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    *, *::before, *::after {
-      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    }
-    body {
-      font-family: 'Comfortaa', cursive, sans-serif;
-      min-height: 100vh;
-      background-color: #B6C4F0;
-      color: #2D3748;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-    .text-heading { color: #1E293B; }
-    .text-subtext { color: #475569; }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="flex flex-col items-center p-4 sm:p-8">
   <main class="w-full max-w-3xl glass-card rounded-3xl p-8 shadow-lg">
+    <button class="theme-toggle interactive-btn fixed top-4 right-4 px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
     <a href="index.html" class="inline-block mb-6 text-sm font-semibold text-indigo-700 hover:text-indigo-900">← Back to Home</a>
     <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-4">Dual Axis Barrel Scanner</h1>
     <h2 class="text-2xl font-bold text-heading mb-4">Description</h2>
