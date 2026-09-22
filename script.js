@@ -70,6 +70,22 @@
 		funFactBubble.addEventListener('click', showNextFunFact);
 		window.setInterval(showNextFunFact, 4000);
 	}
+
+	document.querySelectorAll('.course-item').forEach((item) => {
+		const pill = item.querySelector('.course-pill');
+		pill.addEventListener('click', () => {
+			const isOpen = item.classList.contains('is-open');
+			document.querySelectorAll('.course-item').forEach((other) => {
+				other.classList.remove('is-open');
+				other.querySelector('.course-pill').setAttribute('aria-expanded', 'false');
+			});
+
+			if (!isOpen) {
+				item.classList.add('is-open');
+				pill.setAttribute('aria-expanded', 'true');
+			}
+		});
+	});
 })();
 
 

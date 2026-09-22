@@ -6,26 +6,45 @@
   <title>Dice Game | Reina Servano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col items-center p-4 sm:p-8">
-  <main class="w-full max-w-3xl glass-card rounded-3xl p-8 shadow-lg">
-    <button class="theme-toggle interactive-btn fixed top-4 right-4 px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
-    <a href="index.html" class="inline-block mb-6 text-sm font-semibold text-indigo-700 hover:text-indigo-900">← Back to Home</a>
-    <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-4">Dice Game</h1>
-    <h2 class="text-2xl font-bold text-heading mb-4">Description</h2>
-    <div class="mb-6 text-subtext">
-      <p class="font-semibold">One-Hot Encoded Dice Game</p>
-    </div>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
 
-    <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
-      <li>Designed and programmed an FPGA-based dice game of rolling 22, utilizing clocked and clock-enabled Flip-Flops.</li>
-      <li>Built a custom binary-to-hexadecimal display decoder for readable game output.</li>
-      <li>Created an original score tracker-comparator and game turn counter to manage gameplay logic.</li>
-    </ul>
-  </main>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+      </nav>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
+
+    <main class="page-main project-detail-page">
+      <article class="glass-card project-detail-card">
+        <a href="projects.html" class="inline-block mb-6 text-sm font-semibold" data-ja="← プロジェクト一覧へ">← Back to Projects</a>
+        <h1 class="project-detail-title" data-ja="サイコロゲーム">Dice Game</h1>
+        <h2 class="project-detail-subtitle" data-ja="説明">Description</h2>
+        <div class="mb-6 text-subtext project-meta-block">
+          <p class="project-role" data-ja="ワンホット符号化サイコロゲーム">One-Hot Encoded Dice Game</p>
+          <p class="project-meta-line"><span>FPGA</span> <span>•</span> <span>Digital Logic Design</span></p>
+        </div>
+
+        <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+          <li data-ja="クロック付きおよびクロックイネーブル付きの Flip-Flop を使い、FPGA ベースのサイコロゲームを設計・プログラムした。">Designed and programmed an FPGA-based dice game of rolling 22, utilizing clocked and clock-enabled Flip-Flops.</li>
+          <li data-ja="読みやすいゲーム出力のために、カスタムのバイナリから16進数への表示デコーダを作成した。">Built a custom binary-to-hexadecimal display decoder for readable game output.</li>
+          <li data-ja="ゲームプレイロジックを管理するために、独自の得点比較器とターンカウンターを作成した。">Created an original score tracker-comparator and game turn counter to manage gameplay logic.</li>
+        </ul>
+      </article>
+    </main>
+  </div>
 </body>
 </html>

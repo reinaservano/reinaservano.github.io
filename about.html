@@ -27,7 +27,7 @@
         <a href="projects.html"><span data-ja="作品">Projects</span></a>
       </nav>
 
-      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
       <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
     </header>
 
@@ -57,10 +57,34 @@
         <article class="glass-card info-card">
           <h2>Relevant courses</h2>
           <div class="course-list">
-            <div class="course-pill" title="Electrical Engineering Circuits I">EEC 130A</div>
-            <div class="course-pill" title="Electrical Engineering Circuits II">EEC 130B</div>
-            <div class="course-pill" title="Microelectronics">EEC 133</div>
-            <div class="course-pill" title="Electromagnetics">EEC 160</div>
+            <div class="course-item">
+              <button class="course-pill" type="button" aria-expanded="false" title="Introductory Electromagnetics I">
+                <span class="course-code">EEC 130A</span>
+                <span class="course-name">Introductory Electromagnetics I</span>
+              </button>
+              <div class="course-summary">Summary</div>
+            </div>
+            <div class="course-item">
+              <button class="course-pill" type="button" aria-expanded="false" title="Introductory Electromagnetics II">
+                <span class="course-code">EEC 130B</span>
+                <span class="course-name">Introductory Electromagnetics II</span>
+              </button>
+              <div class="course-summary">Summary</div>
+            </div>
+            <div class="course-item">
+              <button class="course-pill" type="button" aria-expanded="false" title="Electromagnetic Radiation & Antenna Analysis">
+                <span class="course-code">EEC 133</span>
+                <span class="course-name">Electromagnetic Radiation & Antenna Analysis</span>
+              </button>
+              <div class="course-summary">Summary</div>
+            </div>
+            <div class="course-item">
+              <button class="course-pill" type="button" aria-expanded="false" title="Signal Analysis & Communications">
+                <span class="course-code">EEC 160</span>
+                <span class="course-name">Signal Analysis & Communications</span>
+              </button>
+              <div class="course-summary">Summary</div>
+            </div>
           </div>
         </article>
       </section>

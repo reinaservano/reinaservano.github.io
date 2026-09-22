@@ -6,69 +6,85 @@
   <title>What I Made as BWSI EMBSEC TA | Reina Servano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col items-center p-4 sm:p-8">
-  <main class="w-full max-w-3xl glass-card rounded-3xl p-8 shadow-lg">
-    <button class="theme-toggle interactive-btn fixed top-4 right-4 px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
-    <a href="index.html" class="inline-block mb-6 text-sm font-semibold text-indigo-700 hover:text-indigo-900">← Back to Home</a>
-    <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-4">What I Made as BWSI EMBSEC TA</h1>
-    <h2 class="text-2xl font-bold text-heading mb-4">Description</h2>
-    <div class="mb-6 text-subtext">
-      <p class="font-semibold">Embedded Security Summer Program Teacher Assistant</p>
-      <p>Cambridge, MA</p>
-      <p class="mt-2">Massachusetts Institute of Technology</p>
-      <p>July 2024 - August 2024</p>
-    </div>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
 
-    <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
-      <li>Developed 2 qualitative Jupyter notebook labs for the Embedded Systems course, with an emphasis on Hardware Hacking, improving 20 students’ mastery in cryptographic techniques such as Diffie-Hellman and Hashing.</li>
-      <li>Enhanced student comprehension of authentication and encryption by writing a student reference guide for the WolfSSL Library, allowing students to efficiently navigate and apply the library in their hands-on firmware development project.</li>
-      <li>Assisted in testing and validating the students’ MITRE-CAR Ti-MCU board project, helping ensure successful programming, building, and flashing of embedded code while working with a newly introduced SSL Library.</li>
-    </ul>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+      </nav>
 
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-heading mb-4">Interactive Labs</h2>
-      <p class="text-sm text-subtext leading-relaxed mb-6">Open the notebook in Google Colab to run it interactively in your browser.</p>
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <article class="glass-card rounded-2xl p-5 shadow-sm">
-          <h3 class="text-lg font-bold text-heading mb-2">Diffie-Hellman Lab</h3>
-          <p class="text-sm text-subtext leading-relaxed mb-5">Explore key exchange and shared-secret generation.</p>
-          <div class="flex flex-wrap gap-3 text-sm font-semibold">
-            <a href="https://colab.research.google.com/github/reinaservano/reinaservano.github.io/blob/main/Diffie_Hellman.ipynb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open in Google Colab</a>
-            <a href="Diffie_Hellman.ipynb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 rounded-xl border border-indigo-300 text-indigo-700 hover:bg-indigo-50 transition-colors">View notebook</a>
-          </div>
-        </article>
-
-        <article class="glass-card rounded-2xl p-5 shadow-sm">
-          <h3 class="text-lg font-bold text-heading mb-2">Hash Lab</h3>
-          <p class="text-sm text-subtext leading-relaxed">The Hash Lab notebook was lost and is no longer available.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-heading mb-4">WolfSSL Cheat Sheets</h2>
-      <p class="text-sm text-subtext leading-relaxed mb-6">Reference guides for working with the WolfSSL library.</p>
-
-      <div class="glass-card rounded-2xl p-5 shadow-sm">
-        <div class="flex flex-wrap gap-3 text-sm font-semibold">
-          <a href="WolfSSL%20Cheat%20Sheet%20(Volume%202).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 2</a>
-          <a href="WolfSSL%20Cheat%20Sheet%20(Volume%201).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 1</a>
-          <a href="WolfSSL%20Cheat%20Sheet.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 0</a>
+    <main class="page-main project-detail-page">
+      <article class="glass-card project-detail-card">
+        <a href="projects.html" class="inline-block mb-6 text-sm font-semibold" data-ja="← プロジェクト一覧へ">← Back to Projects</a>
+        <h1 data-ja="BWSI EMBSEC TAとして作ったもの">What I Made as BWSI EMBSEC TA</h1>
+        <h2 class="project-detail-subtitle" data-ja="説明">Description</h2>
+        <div class="mb-6 text-subtext project-meta-block">
+          <p class="project-role" data-ja="組み込みセキュリティ夏季プログラム TA">Embedded Security Summer Program Teacher Assistant</p>
+          <p class="project-meta-line"><span>Cambridge, MA</span> <span>•</span> <span>Massachusetts Institute of Technology</span> <span>•</span> <span data-ja="2024年7月 - 2024年8月">July 2024 - August 2024</span></p>
         </div>
-      </div>
-    </section>
 
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-heading mb-4">The Lost Team Brugh Lore</h2>
-      <p class="text-sm text-subtext leading-relaxed">What I helped make as a former high school BWSI participant.</p>
-      <a href="https://github.com/PeanutNotCashew/team_brugh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mt-5 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition-colors">View Team Brugh on GitHub</a>
-    </section>
-  </main>
+        <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+          <li data-ja="組み込みシステム講座向けに 2 つの定性的な Jupyter ノートブック Lab を開発し、ハードウェアハッキングを重視しながら、Diffie-Hellman や Hashing などの暗号技術に関する 20 名の生徒の理解を深めた。">Developed 2 qualitative Jupyter notebook labs for the Embedded Systems course, with an emphasis on Hardware Hacking, improving 20 students’ mastery in cryptographic techniques such as Diffie-Hellman and Hashing.</li>
+          <li data-ja="WolfSSL ライブラリの学生向けリファレンスガイドを作成し、認証と暗号化の理解を深めるとともに、ハンズオンのファームウェア開発プロジェクトで学生が効率的にライブラリを利用できるようにした。">Enhanced student comprehension of authentication and encryption by writing a student reference guide for the WolfSSL Library, allowing students to efficiently navigate and apply the library in their hands-on firmware development project.</li>
+          <li data-ja="MITRE-CAR Ti-MCU ボードプロジェクトのテストと検証を支援し、新しく導入された SSL ライブラリを使って組み込みコードのプログラミング、ビルド、フラッシュの成功を確保した。">Assisted in testing and validating the students’ MITRE-CAR Ti-MCU board project, helping ensure successful programming, building, and flashing of embedded code while working with a newly introduced SSL Library.</li>
+        </ul>
+
+        <section class="mt-10">
+          <h2 data-ja="インタラクティブな Lab">Interactive Labs</h2>
+          <p class="text-sm text-subtext leading-relaxed mb-6" data-ja="Google Colab でノートブックを開いてブラウザ上で対話的に実行できます。">Open the notebook in Google Colab to run it interactively in your browser.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <article class="glass-card p-5">
+              <h3 class="text-lg font-bold text-heading mb-2">Diffie-Hellman Lab</h3>
+              <p class="text-sm text-subtext leading-relaxed mb-5" data-ja="鍵交換と共有秘密の生成を体験します。">Explore key exchange and shared-secret generation.</p>
+              <div class="flex flex-wrap gap-3 text-sm font-semibold">
+                <a href="https://colab.research.google.com/github/reinaservano/reinaservano.github.io/blob/main/Diffie_Hellman.ipynb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open in Google Colab</a>
+                <a href="Diffie_Hellman.ipynb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 border border-indigo-300 text-indigo-700 hover:bg-indigo-50 transition-colors">View notebook</a>
+              </div>
+            </article>
+
+            <article class="glass-card p-5">
+              <h3 class="text-lg font-bold text-heading mb-2">Hash Lab</h3>
+              <p class="text-sm text-subtext leading-relaxed" data-ja="ハッシュ Lab ノートブックは失われ、現在は入手できません。">The Hash Lab notebook was lost and is no longer available.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="mt-10">
+          <h2 data-ja="WolfSSL チートシート">WolfSSL Cheat Sheets</h2>
+          <p class="text-sm text-subtext leading-relaxed mb-6" data-ja="WolfSSL ライブラリの参照ガイドです。">Reference guides for working with the WolfSSL library.</p>
+
+          <div class="glass-card p-5">
+            <div class="flex flex-wrap gap-3 text-sm font-semibold">
+              <a href="WolfSSL%20Cheat%20Sheet%20(Volume%202).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 2</a>
+              <a href="WolfSSL%20Cheat%20Sheet%20(Volume%201).pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 1</a>
+              <a href="WolfSSL%20Cheat%20Sheet.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">Open Volume 0</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-10">
+          <h2 data-ja="失われた Team Brugh の伝説">The Lost Team Brugh Lore</h2>
+          <p class="text-sm text-subtext leading-relaxed" data-ja="高校時代に BWSI に参加していたときに作ったものです。">What I helped make as a former high school BWSI participant.</p>
+          <a href="https://github.com/PeanutNotCashew/team_brugh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mt-5 px-4 py-2 bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition-colors">View Team Brugh on GitHub</a>
+        </section>
+      </article>
+    </main>
+  </div>
 </body>
 </html>

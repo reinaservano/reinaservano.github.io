@@ -6,38 +6,54 @@
   <title>Dual Axis Barrel Scanner | Reina Servano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col items-center p-4 sm:p-8">
-  <main class="w-full max-w-3xl glass-card rounded-3xl p-8 shadow-lg">
-    <button class="theme-toggle interactive-btn fixed top-4 right-4 px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
-    <a href="index.html" class="inline-block mb-6 text-sm font-semibold text-indigo-700 hover:text-indigo-900">← Back to Home</a>
-    <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-4">Dual Axis Barrel Scanner</h1>
-    <h2 class="text-2xl font-bold text-heading mb-4">Description</h2>
-    <div class="mb-6 text-subtext">
-      <p class="font-semibold">Hardware Lead</p>
-      <p>Davis, CA</p>
-      <p class="mt-2">Northwest AI Hub and Robert Mondavi Institute Winery</p>
-      <p>June 2026 - Present</p>
-    </div>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
 
-    <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
-      <li>Designing and documenting schematics that support the Software Lead’s Python program for the Dual-Axis Barrel Scanner, connecting the two motors, the Rotation Axis Motor and the Tilt Axis Motor, to the dedicated control PC and LCD display.</li>
-      <li>Assembling electrical connections powering the 24VDC components including the STEPPERMOTOR IDM57 and ESS17, soldering and securing wires, and crafting 3D-printed mounts using MCAD, while focusing on the safety of the Winemakers.</li>
-      <li>Conducting verification and validation, testing that the wiring and hardware for the Dual-Axis Barrel Scanner is safe, efficient, and capable of accurately scanning the wine barrels with the automated motors talking to the control PC through the RS485 cable.</li>
-    </ul>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+      </nav>
 
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-heading mb-4">Scanner in Action</h2>
-      <video class="w-full rounded-2xl shadow-lg" controls autoplay muted loop playsinline>
-        <source src="scanner.mp4" type="video/mp4">
-        <source src="scanner.MOV" type="video/quicktime">
-        Your browser does not support embedded video.
-      </video>
-    </section>
-  </main>
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
+
+    <main class="page-main project-detail-page">
+      <article class="glass-card project-detail-card">
+        <a href="projects.html" class="inline-block mb-6 text-sm font-semibold" data-ja="← プロジェクト一覧へ">← Back to Projects</a>
+        <h1 class="project-detail-title" data-ja="二軸ワイン用桶スキャンナー">Dual Axis Barrel Scanner</h1>
+        <h2 class="project-detail-subtitle" data-ja="まとめ">Description</h2>
+        <div class="mb-6 text-subtext project-meta-block">
+          <p class="project-role" data-ja="役：ハードウェアリード">Hardware Lead</p>
+          <p class="project-meta-line"><span>Davis, CA</span> <span>•</span> <span data-ja="Northwest AI Hub & Robert Mondavi Institute Winery">Northwest AI Hub & Robert Mondavi Institute Winery</span> <span>•</span> <span data-ja="2026年6月 - 2026年9月">June 2026 - September 2026</span></p>
+        </div>
+
+        <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+          <li data-ja="ソフトウェアリードの Python プログラムを支える回路図の設計とドキュメンテーションを行い、回転軸モーターと傾斜軸モーターを専用制御 PC と LCD 画面へ接続した。">Designing and documenting schematics that support the Software Lead’s Python program for the Dual-Axis Barrel Scanner, connecting the two motors, the Rotation Axis Motor and the Tilt Axis Motor, to the dedicated control PC and LCD display.</li>
+          <li data-ja="24VDC 機器向けの配線を組み立て、STEPPERMOTOR IDM57 と ESS17 を含む電力接続やはんだ付け、MCAD を用いた 3D プリントマウントの製作を行い、ワイナリー従業員の安全を重視した。">Assembling electrical connections powering the 24VDC components including the STEPPERMOTOR IDM57 and ESS17, soldering and securing wires, and crafting 3D-printed mounts using MCAD, while focusing on the safety of the Winemakers.</li>
+          <li data-ja="検証・評価を行い、二軸ワイン用桶スキャンナーの配線とハードウェアが安全かつ効率的であり、RS485 ケーブル経由で制御 PC と通信する自動モーターでワイン樽を正確にスキャンできることを確認した。">Conducting verification and validation, testing that the wiring and hardware for the Dual-Axis Barrel Scanner is safe, efficient, and capable of accurately scanning the wine barrels with the automated motors talking to the control PC through the RS485 cable.</li>
+        </ul>
+
+        <section class="mt-10">
+          <h2 data-ja="この動画、見て見て！">Scanner in Action!</h2>
+          <video class="w-full" controls autoplay muted loop playsinline>
+            <source src="scanner.mp4" type="video/mp4">
+            <source src="scanner.MOV" type="video/quicktime">
+            Your browser does not support embedded video.
+          </video>
+        </section>
+      </article>
+    </main>
+  </div>
 </body>
 </html>
