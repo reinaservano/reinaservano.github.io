@@ -77,11 +77,18 @@
 			const isOpen = item.classList.contains('is-open');
 			document.querySelectorAll('.course-item').forEach((other) => {
 				other.classList.remove('is-open');
-				other.querySelector('.course-pill').setAttribute('aria-expanded', 'false');
+				other.classList.remove('is-hidden');
+				const otherPill = other.querySelector('.course-pill');
+				otherPill.classList.remove('is-open');
+				otherPill.setAttribute('aria-expanded', 'false');
 			});
 
 			if (!isOpen) {
 				item.classList.add('is-open');
+				pill.classList.add('is-open');
+				document.querySelectorAll('.course-item').forEach((other) => {
+					if (other !== item) other.classList.add('is-hidden');
+				});
 				pill.setAttribute('aria-expanded', 'true');
 			}
 		});

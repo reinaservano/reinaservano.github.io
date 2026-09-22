@@ -148,8 +148,11 @@ p, h1, h2, h3, h4, a, button, li, span {
   font-weight: 700;
   letter-spacing: 0.02em;
   padding: 10px 14px;
-  border-radius: 0;
   border: 1px solid transparent;
+}
+
+.site-nav button {
+  border-radius: 8px;
 }
 
 .site-nav a {
@@ -190,7 +193,7 @@ p, h1, h2, h3, h4, a, button, li, span {
   width: 42px;
   height: 42px;
   padding: 0;
-  border-radius: 0;
+  border-radius: 8px;
   position: relative;
 }
 
@@ -229,13 +232,14 @@ body.dark-mode .theme-toggle::before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   gap: 2px;
   width: 42px;
   min-height: 26px;
   padding: 3px;
-  margin-top: 10px;
+  margin-top: 0;
   border: 1px solid var(--card-border);
-  border-radius: 0;
+  border-radius: 8px;
   background: var(--soft-panel);
   color: var(--subtext-color);
   font-family: inherit;
@@ -247,9 +251,10 @@ body.dark-mode .theme-toggle::before {
 .language-option {
   display: grid;
   place-items: center;
-  width: 16px;
+  flex: 1 1 0;
+  width: auto;
   height: 16px;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .language-option.is-active {
@@ -402,6 +407,20 @@ body.dark-mode .theme-toggle::after {
   gap: 12px;
 }
 
+.fun-fact-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.fun-fact-label {
+  color: var(--accent-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .fun-fact {
   display: inline-flex;
   align-items: center;
@@ -546,6 +565,7 @@ body.dark-mode .theme-toggle::after {
 
 .info-card h2 {
   margin-top: 0;
+  margin-bottom: 16px;
   color: var(--heading-color);
 }
 
@@ -554,6 +574,24 @@ body.dark-mode .theme-toggle::after {
   padding-left: 18px;
   color: var(--subtext-color);
   line-height: 1.8;
+}
+
+.info-card .interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1.2;
+}
+
+.interest-tag {
+  padding: 8px 12px;
+  border: 1px solid var(--card-border);
+  background: var(--soft-panel);
+  color: var(--heading-color);
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
 .course-list {
@@ -566,6 +604,20 @@ body.dark-mode .theme-toggle::after {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  max-height: 80px;
+  opacity: 1;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.course-item.is-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.course-item.is-open {
+  max-height: 180px;
 }
 
 .course-pill {
@@ -577,7 +629,7 @@ body.dark-mode .theme-toggle::after {
   min-height: 30px;
   max-width: 120px;
   padding: 0 12px;
-  border-radius: 0;
+  border-radius: 8px;
   background: var(--soft-panel);
   border: 1px solid var(--card-border);
   color: var(--heading-color);
@@ -605,6 +657,7 @@ body.dark-mode .theme-toggle::after {
 .course-name {
   display: inline-block;
   white-space: nowrap;
+  font-size: inherit;
 }
 
 .course-code {
@@ -623,9 +676,14 @@ body.dark-mode .theme-toggle::after {
 }
 
 .course-pill.is-open {
-  max-width: 320px;
+  width: 100%;
+  max-width: none;
+  min-height: 42px;
+  padding: 8px 12px;
   transform: translateY(-1px);
   border-color: rgba(79, 110, 247, 0.3);
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .course-pill.is-open::before {
@@ -633,15 +691,18 @@ body.dark-mode .theme-toggle::after {
 }
 
 .course-pill.is-open .course-code {
-  max-width: 0;
-  opacity: 0;
-  margin-right: 0;
+  max-width: 100px;
+  opacity: 1;
+  margin-right: 8px;
+  flex: 0 0 auto;
 }
 
 .course-pill.is-open .course-name {
-  max-width: 260px;
+  max-width: calc(100% - 108px);
   opacity: 1;
   margin-left: 0;
+  white-space: normal;
+  flex: 1 1 auto;
 }
 
 .course-summary {
@@ -655,9 +716,9 @@ body.dark-mode .theme-toggle::after {
 }
 
 .course-item.is-open .course-summary {
-  max-height: 60px;
+  max-height: 100px;
   opacity: 1;
-  padding-top: 2px;
+  padding: 4px 12px 2px;
 }
 
 .page-intro {
@@ -685,6 +746,12 @@ body.dark-mode .theme-toggle::after {
 .hero {
   border-radius: 0 !important;
   box-shadow: none !important;
+}
+
+a,
+button,
+.fun-fact {
+  border-radius: 8px !important;
 }
 
 .project-detail-subtitle {
