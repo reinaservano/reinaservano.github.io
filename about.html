@@ -6,47 +6,71 @@
   <title>About | Reina Servano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col justify-between items-center p-4 sm:p-8 relative">
+<body class="site-body light-mode">
   <div class="blob w-72 h-72 top-10 left-8"></div>
   <div class="blob w-80 h-80 bottom-10 right-12"></div>
 
-  <div class="content-shell w-full max-w-4xl flex flex-col items-center">
-    <header class="w-full max-w-4xl glass-card rounded-2xl px-6 py-4 flex justify-between items-center mb-8 shadow-sm">
-      <div class="flex items-center space-x-3">
-        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="h-10 w-auto object-contain" />
-        <span class="font-bold text-lg text-heading tracking-wide">Reina Servano</span>
-      </div>
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
 
-      <nav class="hidden sm:flex space-x-6 text-sm font-semibold text-subtext">
-        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
-        <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html" class="is-active"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
       </nav>
-      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
     </header>
 
-    <main class="w-full max-w-3xl glass-card rounded-3xl p-8 sm:p-10 shadow-lg">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-        <div class="flex-shrink-0">
-          <img src="Me.jpg" alt="Reina Servano" class="w-40 h-40 object-cover rounded-[2rem] shadow-lg border border-white/50" />
+    <main class="page-main about-page">
+      <section class="about-hero glass-card">
+        <div class="about-copy">
+          <span class="eyebrow" data-ja="学生・研究者">Student and researcher</span>
+          <h1 data-ja="私は怜波です～！☆彡">About me</h1>
+          <p data-ja="UC Davisの電気工学専攻の学生で、RF、PCB設計、ロボット工学、そして宇宙に興味があります。">I’m a UC Davis electrical engineering student interested in RF, PCB design, robotics, and space.</p>
         </div>
-
-        <div class="flex-1">
-          <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-6">About</h1>
-          <p class="text-base leading-relaxed text-subtext mb-8">
-            I am currently a Junior at UC Davis.
-          </p>
-
-          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-indigo-600 text-white font-bold shadow-md hover:bg-indigo-700 transition-colors">
-            View Resume
-          </a>
+        <div class="profile-stack">
+          <img src="Me.jpg" alt="Portrait of Reina Servano" class="profile-photo">
         </div>
-      </div>
+      </section>
+
+      <section class="info-grid">
+        <article class="glass-card info-card">
+          <h2>Interests</h2>
+          <ul>
+            <li>Electromagnetics</li>
+            <li>RF systems</li>
+            <li>PCB design</li>
+            <li>Robotics</li>
+          </ul>
+        </article>
+
+        <article class="glass-card info-card">
+          <h2>Relevant courses</h2>
+          <div class="course-list">
+            <div class="course-pill" title="Electrical Engineering Circuits I">EEC 130A</div>
+            <div class="course-pill" title="Electrical Engineering Circuits II">EEC 130B</div>
+            <div class="course-pill" title="Microelectronics">EEC 133</div>
+            <div class="course-pill" title="Electromagnetics">EEC 160</div>
+          </div>
+        </article>
+      </section>
     </main>
+
+    <footer class="site-footer glass-card">
+      <p>Contact: reina.servano@gmail.com</p>
+      <a href="mailto:reinaservano@gmail.com">reinaservano@gmail.com</a>
+    </footer>
   </div>
 </body>
 </html>
+

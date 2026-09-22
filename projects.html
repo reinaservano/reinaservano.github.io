@@ -6,64 +6,63 @@
   <title>Projects | Reina Servano</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="flex flex-col items-center p-4 sm:p-8">
-  <main class="w-full max-w-4xl">
-    <header class="w-full glass-card rounded-2xl px-6 py-4 flex justify-between items-center mb-8 shadow-sm">
-      <a href="index.html" class="font-bold text-lg text-heading tracking-wide">Reina Servano</a>
-      <nav class="flex space-x-6 text-sm font-semibold text-subtext">
-        <a href="index.html" class="hover:text-indigo-400 transition-colors">Home</a>
-        <a href="about.html" class="hover:text-indigo-400 transition-colors">About</a>
-        <a href="projects.html" class="text-indigo-600 hover:text-indigo-400 transition-colors">Projects</a>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html" class="is-active"><span data-ja="作品">Projects</span></a>
       </nav>
-      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()"></button>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 rounded-xl text-xs font-semibold shadow" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
     </header>
 
-    <section class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold text-heading mb-3">Projects</h1>
-      <p class="text-subtext">A collection of my technical work and ongoing projects.</p>
-    </section>
+    <main class="page-main projects-page">
+      <section class="page-intro">
+        <span class="eyebrow" data-ja="制作物">Selected work</span>
+        <h1 data-ja="作品">Projects</h1>
+      </section>
 
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <a href="barrel-scanner.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
-        <div class="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">🍷</div>
-        <h2 class="text-lg font-bold text-heading mb-2">Dual Axis Barrel Scanner</h2>
-        <p class="text-xs font-semibold text-indigo-600 mb-2">Summer 2026</p>
-        <p class="text-sm text-subtext leading-relaxed">Barrel Scanner hardware project I worked on as Hardware Lead for the Northwest AI Hub internship.</p>
-      </a>
+      <section class="work-grid">
+        <article class="project-card glass-card">
+          <div class="project-meta"><span class="project-tag">WIP</span><span class="project-year">2026</span></div>
+          <h2>Dual Axis Barrel Scanner</h2>
+          <p>Hardware project with emphasis on testability, board design, and signal validation.</p>
+          <a href="barrel-scanner.html">View project →</a>
+        </article>
 
-      <a href="dice-game.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
-        <div class="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">🎲</div>
-        <h2 class="text-lg font-bold text-heading mb-2">Dice Game</h2>
-        <p class="text-xs font-semibold text-indigo-600 mb-2">Spring 2026</p>
-        <p class="text-sm text-subtext leading-relaxed">One-hot encoded FPGA dice game built with custom decode logic, flip-flops, score comparison, and turn tracking.</p>
-      </a>
+        <article class="project-card glass-card">
+          <div class="project-meta"><span class="project-tag">FPGA</span><span class="project-year">2026</span></div>
+          <h2>Dice Game</h2>
+          <p>One-hot logic design with state tracking and scoreboard comparison.</p>
+          <a href="dice-game.html">View project →</a>
+        </article>
 
-      <article class="glass-card rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">🚁</div>
-        <h2 class="text-lg font-bold text-heading mb-2">Drone ML/AI Project</h2>
-        <p class="text-xs font-semibold text-indigo-600 mb-2">Spring 2025</p>
-        <p class="text-sm text-subtext leading-relaxed">Still adding info.</p>
-      </article>
+        <article class="project-card glass-card">
+          <div class="project-meta"><span class="project-tag">EMBSEC</span><span class="project-year">2024</span></div>
+          <h2>BWSI TA Work</h2>
+          <p>Embedded security materials and workshop support for MIT Beaver Works.</p>
+          <a href="bwsi.html">View project →</a>
+        </article>
+      </section>
+    </main>
 
-      <a href="bwsi.html" class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md block hover:-translate-y-1 transition-transform">
-        <div class="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">🦫</div>
-        <h2 class="text-lg font-bold text-heading mb-2">What I Made as BWSI EMBSEC TA</h2>
-        <p class="text-xs font-semibold text-indigo-600 mb-2">Summer 2024</p>
-        <p class="text-sm text-subtext leading-relaxed">Labs I helped create as an Embedded Security TA for MIT Beaver Works Summer Institute Program.</p>
-      </a>
-
-      <article class="glass-card rounded-2xl p-6 shadow-sm">
-        <div class="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center mb-4 text-2xl shadow-inner">🧠</div>
-        <h2 class="text-lg font-bold text-heading mb-2">SRL ML/AI Project</h2>
-        <p class="text-xs font-semibold text-indigo-600 mb-2">Spring 2024</p>
-        <p class="text-sm text-subtext leading-relaxed">Still adding info.</p>
-      </article>
-    </section>
-  </main>
+    <footer class="site-footer glass-card">
+      <p>Contact: reina.servano@gmail.com</p>
+      <a href="mailto:reinaservano@gmail.com">reinaservano@gmail.com</a>
+    </footer>
+  </div>
 </body>
 </html>
+

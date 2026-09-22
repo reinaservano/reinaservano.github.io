@@ -8,8 +8,10 @@
 		document.body.classList.toggle('light-mode', !isDark);
 
 		document.querySelectorAll('.theme-toggle').forEach((button) => {
-			button.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-			button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+			const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+			button.textContent = '';
+			button.setAttribute('aria-label', label);
+			button.setAttribute('title', label);
 		});
 	}
 
@@ -19,6 +21,55 @@
 		applyTheme(nextTheme);
 	};
 
+	const originalText = new WeakMap();
+
+	function setLanguage(language) {
+		const isJapanese = language === 'ja';
+		document.documentElement.lang = isJapanese ? 'ja' : 'en';
+		document.querySelectorAll('.language-toggle').forEach((button) => {
+			button.classList.toggle('is-japanese', isJapanese);
+			button.setAttribute('aria-label', isJapanese ? '英語に切り替え' : 'Switch to Japanese');
+			button.setAttribute('title', isJapanese ? '英語に切り替え' : 'Switch to Japanese');
+		});
+
+		document.querySelectorAll('[data-ja]').forEach((element) => {
+			if (!originalText.has(element)) originalText.set(element, element.textContent);
+			element.textContent = isJapanese ? element.dataset.ja : originalText.get(element);
+		});
+	}
+
+	window.toggleLanguage = () => {
+		const nextLanguage = document.documentElement.lang === 'ja' ? 'en' : 'ja';
+		localStorage.setItem('language', nextLanguage);
+		setLanguage(nextLanguage);
+	};
+
 	applyTheme(savedTheme || deviceTheme);
+	setLanguage(localStorage.getItem('language') || 'en');
+
+	const funFactText = document.querySelector('#fun-fact-text');
+	const funFacts = [
+		'I have an orange cat at home',
+		'My favorite places are aquariums',
+		'I was an aerospace engineering major',
+		'Yahaha! You found me'
+	];
+
+	if (funFactText) {
+		let factIndex = 0;
+		const funFactBubble = funFactText.parentElement;
+
+		const showNextFunFact = () => {
+			factIndex = (factIndex + 1) % funFacts.length;
+			funFactText.textContent = funFacts[factIndex];
+			funFactBubble.classList.remove('is-popping');
+			void funFactBubble.offsetWidth;
+			funFactBubble.classList.add('is-popping');
+		};
+
+		funFactBubble.addEventListener('click', showNextFunFact);
+		window.setInterval(showNextFunFact, 4000);
+	}
 })();
+
 
