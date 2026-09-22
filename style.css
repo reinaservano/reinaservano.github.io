@@ -13,6 +13,10 @@
 }
 
 * {
+.skill-line-break {
+  flex-basis: 100%;
+  height: 0;
+}
   box-sizing: border-box;
 }
 
@@ -563,6 +567,10 @@ body.dark-mode .theme-toggle::after {
   box-shadow: none !important;
 }
 
+.skills-card {
+  grid-column: 1 / -1;
+}
+
 .info-card h2 {
   margin-top: 0;
   margin-bottom: 16px;
@@ -590,6 +598,39 @@ body.dark-mode .theme-toggle::after {
   border: 1px solid var(--card-border);
   background: var(--soft-panel);
   color: var(--heading-color);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.info-card .skills-list,
+.info-card .interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+  line-height: 1.2;
+}
+
+.skill-item,
+.interest-item {
+  padding: 8px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--soft-panel);
+  color: var(--heading-color);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.skill-category {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
   font-size: 0.76rem;
   font-weight: 700;
 }

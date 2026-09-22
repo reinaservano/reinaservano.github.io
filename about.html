@@ -34,9 +34,9 @@
     <main class="page-main about-page">
       <section class="about-hero glass-card">
         <div class="about-copy">
-          <span class="eyebrow" data-ja="学生・研究者">Student and researcher</span>
-          <h1 data-ja="私は怜波です～！☆彡">About me</h1>
-          <p data-ja="UC Davisの電気工学専攻の学生で、RF、PCB設計、ロボット工学、そして宇宙に興味があります。">I’m a UC Davis electrical engineering student interested in RF, PCB design, robotics, and space.</p>
+          <span class="eyebrow" data-ja="学生">Student</span>
+          <h1 data-ja="怜波です～！☆彡">About me</h1>
+          <p data-ja="日本とアメリカのハーフです。UC Davisの電気工学専攻の学生で、RF、PCB設計、ロボット工学、そして宇宙に興味があります。電気電子工学は難しいけど、楽しんでいます！">I’m a UC Davis electrical engineering student interested in RF, PCB design, robotics, and space.</p>
         </div>
         <div class="profile-stack">
           <img src="Me.jpg" alt="Portrait of Reina Servano" class="profile-photo">
@@ -45,54 +45,73 @@
 
       <section class="info-grid">
         <article class="glass-card info-card">
-          <h2>Interests</h2>
-          <ul class="interest-list">
-            <li class="interest-tag">Electromagnetics</li>
-            <li class="interest-tag">RF systems</li>
-            <li class="interest-tag">PCB design</li>
-            <li class="interest-tag">Robotics</li>
+          <h2 data-ja="○スキル○">Skills</h2>
+          <ul class="skills-list">
+            <li class="skill-category"data-ja="ツール">Design Software</li>
+            <li class="skill-item">HFSS</li>
+            <li class="skill-item">Altium Designer</li>
+            <li class="skill-item">Fusion 360</li>
+            <li class="skill-line-break" aria-hidden="true"></li>
+            <li class="skill-category" data-ja="ハードウェア">Hardware</li>
+            <li class="skill-item" data-ja="はんだ付け">Soldering</li>
+            <li class="skill-item" data-ja="3D プリント (Bambu)">3D Printing (Bambu)</li>
+            <li class="skill-line-break" aria-hidden="true"></li>
+            <li class="skill-category" data-ja="プログラミング">Programming</li>
+            <li class="skill-item">Python</li>
+            <li class="skill-item">C</li>
+            <li class="skill-item">C++</li>
           </ul>
         </article>
 
         <article class="glass-card info-card">
-          <h2>Relevant courses</h2>
+          <h2 data-ja="○関連する講義○">Relevant courses</h2>
           <div class="course-list">
             <div class="course-item">
               <button class="course-pill" type="button" aria-expanded="false" title="Introductory Electromagnetics I">
                 <span class="course-code">EEC 130A</span>
-                <span class="course-name">Introductory Electromagnetics I</span>
+                <span class="course-name" data-ja="電磁気学 I">Introductory Electromagnetics I</span>
               </button>
-              <div class="course-summary">Fundamentals of electrostatic and magnetostatic fields, including Maxwell's equations, boundary conditions, and wave behavior.</div>
+              <div class="course-summary" data-ja="まとめ：初心者向けの電磁気学のクラス。基本的な電場と磁場、マクスウェルの方式、送電線について学びます。"><b>Description:</b> Basics of static electric and magnetic fields and fields in materials. Work and scalar potential. Maxwell’s equations in integral and differential form. Plane waves in lossless media. Lossless transmission lines.</div>
             </div>
             <div class="course-item">
               <button class="course-pill" type="button" aria-expanded="false" title="Introductory Electromagnetics II">
                 <span class="course-code">EEC 130B</span>
-                <span class="course-name">Introductory Electromagnetics II</span>
+                <span class="course-name" data-ja="電磁気学 II">Introductory Electromagnetics II</span>
               </button>
-              <div class="course-summary">Applied electromagnetic theory covering transmission lines, waveguides, propagation, and practical field analysis.</div>
+              <div class="course-summary" data-ja="まとめ：初心者向けの電磁気学のクラスの続き。電波の伝播、反射、ガイドウェイブ、単純な変調ウェーブと分散、および基本的なアンテナについて学びます。"><b>Description:</b> Plane wave propagation in lossy media, reflections, guided waves, simple modulated waves and dispersion, and basic antennas.</div>
             </div>
             <div class="course-item">
               <button class="course-pill" type="button" aria-expanded="false" title="Electromagnetic Radiation & Antenna Analysis">
                 <span class="course-code">EEC 133</span>
-                <span class="course-name">Electromagnetic Radiation & Antenna Analysis</span>
+                <span class="course-name" data-ja="電磁放射とアンテナ分析">Electromagnetic Radiation & Antenna Analysis</span>
               </button>
-              <div class="course-summary">Analysis and design of antennas, radiation patterns, polarization, gain, and the interaction between fields and radiating structures.</div>
+              <div class="course-summary" data-ja="まとめ：電磁放射の特性、アンテナの分析と設計について学びます。"><b>Description:</b> Properties of electromagnetic radiation; analysis and design of antennas: ideal, small loop, aperture, and arrays; antenna simulations/measurements.</div>
             </div>
             <div class="course-item">
               <button class="course-pill" type="button" aria-expanded="false" title="Signal Analysis & Communications">
                 <span class="course-code">EEC 160</span>
-                <span class="course-name">Signal Analysis & Communications</span>
+                <span class="course-name" data-ja="信号分析と通信">Signal Analysis & Communications</span>
               </button>
-              <div class="course-summary">Signals and systems concepts including Fourier analysis, modulation, noise, filtering, and communication system performance.</div>
+              <div class="course-summary" data-ja="まとめ：信号と通信の分析。フーリエ変換、周波数変調、振幅変調、などの方式について学びます。"><b>Description:</b> Signal analysis based on Fourier methods. Fourier series and transforms; time-sampling, convolution, and filtering; spectral density; modulation: carrier-amplitude, carrier-frequency, and pulse-amplitude.</div>
             </div>
           </div>
+        </article>
+
+        <article class="glass-card info-card skills-card">
+          <h2 data-ja="♡関心♡">Interests</h2>
+          <ul class="interests-list">
+            <li class="interest-item" data-ja="RFシステム">RF Systems</li>
+            <li class="interest-item" data-ja="電磁気学">Electromagnetics</li>
+            <li class="interest-item" data-ja="人工衛星">Satellites</li>
+            <li class="interest-item" data-ja="ロボティクス">Robotics</li>
+            <li class="interest-item" data-ja="RFID">RFID</li>
+          </ul>
         </article>
       </section>
     </main>
 
     <footer class="site-footer glass-card">
-      <p>Contact: reina.servano@gmail.com</p>
-      <a href="mailto:reinaservano@gmail.com">reinaservano@gmail.com</a>
+      <p data-ja="連絡先: reinaservano@gmail.com"> Contact: reinaservano@gmail.com</p>
     </footer>
   </div>
 </body>
