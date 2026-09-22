@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stove Sensor | Reina Servano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+        <a href="blog.html"><span data-ja="ブログ">Blog</span></a>
+      </nav>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
+
+    <main class="page-main project-detail-page">
+      <article class="glass-card project-detail-card">
+        <a href="projects.html" class="inline-block mb-6 text-sm font-semibold" data-ja="← プロジェクト一覧へ">← Back to Projects</a>
+        <h1 class="project-detail-title" data-ja="ストーブセンサー">Stove Sensor</h1>
+        <h2 class="project-detail-subtitle" data-ja="概要">Overview</h2>
+        <div class="mb-6 text-subtext project-meta-block">
+          <p class="project-role" data-ja="キッチンの安全を支援する見守りシステム">A monitoring system designed to support kitchen safety</p>
+          <p class="project-meta-line"><span>A03 - Team 5</span> <span>•</span> <span>UC Davis</span> <span>•</span> <span>Electrical Engineering</span></p>
+        </div>
+
+        <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+          <li data-ja="認知症のある人がストーブをつけたままにしてしまう危険に対応するためのプロジェクト。">Designed to address the risk of a stove being accidentally left on, especially for people living with dementia.</li>
+          <li data-ja="ストーブのノブに取り付けたボタンと PIR モーションセンサーを使い、動きがない状態で一定時間が経過すると警報を鳴らします。">A button attached to the stove knob and a PIR motion sensor work together to sound an alarm when the stove is on and no motion is detected for a set period.</li>
+          <li data-ja="Arduino Uno R3 がタイマー、ノブの状態、警報を制御します。">An Arduino Uno R3 controls the timer, knob state, and alarm behavior.</li>
+        </ul>
+
+        <section class="mt-10">
+          <h2 class="project-detail-subtitle" data-ja="方法と結果">Methods and Results</h2>
+          <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+            <li data-ja="ストーブのノブを回すとボタンが解除され、タイマーが開始します。">Turning the stove knob releases the attached button and starts the timer.</li>
+            <li data-ja="PIR センサーが大きな動きを検出するとタイマーをリセットします。">The PIR sensor resets the timer when it detects significant movement.</li>
+            <li data-ja="動きがないまましきい値を超えると、注意を促すパルス音の警報が鳴ります。">If the timer reaches its threshold without detected motion, a pulsing alarm sounds to prompt the user to turn off the stove.</li>
+          </ul>
+        </section>
+
+        <section class="mt-10">
+          <h2 class="project-detail-subtitle" data-ja="今後の課題">Future Work</h2>
+          <ul class="list-disc pl-6 space-y-4 text-subtext leading-relaxed">
+            <li data-ja="より丈夫で精密なノブ用アタッチメントを設計する。">Design a sturdier and more precise attachment for the stove knob.</li>
+            <li data-ja="異なるキッチンに対応できる、より柔軟で取り付けやすい構造にする。">Develop a more accessible and flexible installation method for different kitchens.</li>
+            <li data-ja="配線を減らすため、将来的にはワイヤレス部品を検討する。">Explore wireless components to make placement and wiring more flexible.</li>
+          </ul>
+        </section>
+
+        <section class="mt-10">
+          <h2 class="project-detail-subtitle" data-ja="ポスター">Poster</h2>
+          <img src="eng3finalpresentation.jpg" alt="Stove Sensor engineering poster" class="w-full">
+          <p class="mt-5 text-subtext">
+            <a href="eng3.pdf" target="_blank" rel="noopener noreferrer" data-ja="PDFポスターを開く">Open the poster PDF</a>
+          </p>
+          <embed src="eng3.pdf" type="application/pdf" width="100%" height="720" aria-label="Stove Sensor engineering poster PDF">
+        </section>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

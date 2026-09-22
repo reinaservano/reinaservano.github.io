@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Reina Servano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+        <a href="blog.html" class="is-active"><span data-ja="ブログ">Blog</span></a>
+      </nav>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
+
+    <main class="page-main blog-page">
+      <section class="page-intro">
+        <span class="eyebrow" data-ja="作業台からのメモ">Notes from the workbench</span>
+        <h1 data-ja="ブログ">Blog</h1>
+        <h2 data-ja="ごめんなさい、まだブログはありません！">Sorry, no blog posts available yet!</h2>
+    </main>
+
+    <footer class="site-footer glass-card">
+      <p data-ja="連絡先：reina.servano@gmail.com">Contact: reina.servano@gmail.com</p>
+      <a href="mailto:reina.servano@gmail.com">reina.servano@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>

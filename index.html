@@ -24,6 +24,7 @@
         <a href="index.html" class="is-active"><span data-ja="ホーム">Home</span></a>
         <a href="about.html"><span data-ja="概要">About</span></a>
         <a href="projects.html"><span data-ja="作品">Projects</span></a>
+        <a href="blog.html"><span data-ja="ブログ">Blog</span></a>
       </nav>
 
       <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
@@ -60,10 +61,10 @@
         <div class="spotlight-card glass-card">
           <div class="spotlight-header">
             <span class="eyebrow" data-ja="このサイトはまだ掃除中です！">This site is still under construction!</span>
-            <div class="fun-fact-group">
-              <span class="fun-fact-label" data-ja="豆知識：">Fun Facts:</span>
-              <button type="button" id="fun-fact-button" class="fun-fact" aria-label="Next fact">
-                <span id="fun-fact-text">I have an orange cat at home</span>
+            <div class="featured-projects-group">
+              <span class="featured-projects-label" data-ja="注目の作品：">Featured Work:</span>
+              <button type="button" id="featured-projects-button" class="fun-fact" aria-label="Next project">
+                <span id="featured-projects-text">Dual-Axis Barrel Scanner</span>
               </button>
             </div>
           </div>
@@ -73,39 +74,39 @@
       <section class="work-grid">
         <article class="project-card glass-card">
           <div class="project-meta">
-            <span class="project-tag">WIP</span>
+            <span class="project-tag">Summer</span>
             <span class="project-year">2026</span>
           </div>
-          <h1><data value="二軸ワイン用桶スキャンナー" class="ja"></data>Dual Axis Barrel Scanner</h1>
-          <p>I led the hardware development for a custom barrel-scanner project with a focus on signal integrity and testability.</p>
-          <a href="barrel-scanner.html">View project →</a>
+          <h2 data-ja="二軸桶スキャンナー">Dual-Axis Barrel Scanner</h2>
+          <p data-ja="私は、信号の完全性とテスト可能性に焦点を当てたカスタムの桶スキャンナープロジェクトのハードウェア開発をリードしました。">I led the hardware development for a custom barrel-scanner project with a focus on signal integrity and testability.</p>
+          <a href="barrel-scanner.html" data-ja="プロジェクトを表示 →">View project →</a>
         </article>
 
         <article class="project-card glass-card">
           <div class="project-meta">
-            <span class="project-tag">FPGA</span>
+            <span class="project-tag">Spring</span>
             <span class="project-year">2026</span>
           </div>
-          <h2>Dice Game</h2>
-          <p>A one-hot encoded game implemented with decode logic, state tracking, and turn comparison for scoreboard logic.</p>
-          <a href="dice-game.html">View project →</a>
+          <h2 data-ja="FPGA サイコロゲーム">FPGA-based Roll 22 Game</h2>
+          <p data-ja="1-Hot符号化されたゲームで、デコードロジック、状態追跡、およびスコアボードロジックのためのターン比較が実装されています。">A one-hot encoded game implemented with decode logic, state tracking, and turn comparison for scoreboard logic.</p>
+          <a href="dice-game.html" data-ja="プロジェクトを表示 →">View project →</a>
         </article>
 
         <article class="project-card glass-card">
           <div class="project-meta">
-            <span class="project-tag">EMBSEC</span>
+            <span class="project-tag">Summer</span>
             <span class="project-year">2024</span>
           </div>
-          <h2>BWSI TA Work</h2>
-          <p>I helped create embedded security lab materials and support systems for the MIT Beaver Works program.</p>
-          <a href="bwsi.html">View project →</a>
+          <h2 data-ja="BWSIの先生アシスタントとしての作品、ラボなど">BWSI TA Labs and Projects</h2>
+          <p data-ja="私は、MIT Beaver Worksプログラムのための埋め込みセキュリティラボ素材とサポートシステムの作成を支援しました。">I helped create embedded security lab materials and support systems for the MIT Beaver Works program.</p>
+          <a href="bwsi.html" data-ja="プロジェクトを表示 →">View project →</a>
         </article>
       </section>
     </main>
 
     <footer class="site-footer glass-card">
-      <p data-ja="連絡先：reinaservano@gmail.com">Contact: reina.servano@gmail.com</p>
-      <a href="mailto:reinaservano@gmail.com">reinaservano@gmail.com</a>
+      <p data-ja="連絡先：reinaservano@gmail.com">Contact: reinaservano@gmail.com</p>
+      <p>&copy; 2026 Reina Servano. All rights reserved. Created with HTML, CSS, and JavaScript.</p>
     </footer>
   </div>
 </body>

@@ -47,28 +47,27 @@
 	applyTheme(savedTheme || deviceTheme);
 	setLanguage(localStorage.getItem('language') || 'en');
 
-	const funFactText = document.querySelector('#fun-fact-text');
-	const funFacts = [
-		'I have an orange cat at home',
-		'My favorite places are aquariums',
-		'I was an aerospace engineering major',
-		'Yahaha! You found me'
+	const featuredProjectsText = document.querySelector('#featured-projects-text');
+	const featuredProjects = [
+		'Dual-Axis Barrel Scanner',
+		'FPGA-based Roll 22 Game',
+		'BWSI TA Labs and Projects'
 	];
 
-	if (funFactText) {
+	if (featuredProjectsText) {
 		let factIndex = 0;
-		const funFactBubble = funFactText.parentElement;
+		const featuredProjectsBubble = featuredProjectsText.parentElement;
 
-		const showNextFunFact = () => {
-			factIndex = (factIndex + 1) % funFacts.length;
-			funFactText.textContent = funFacts[factIndex];
-			funFactBubble.classList.remove('is-popping');
-			void funFactBubble.offsetWidth;
-			funFactBubble.classList.add('is-popping');
+		const showNextFeaturedProject = () => {
+			factIndex = (factIndex + 1) % featuredProjects.length;
+			featuredProjectsText.textContent = featuredProjects[factIndex];
+			featuredProjectsBubble.classList.remove('is-popping');
+			void featuredProjectsBubble.offsetWidth;
+			featuredProjectsBubble.classList.add('is-popping');
 		};
 
-		funFactBubble.addEventListener('click', showNextFunFact);
-		window.setInterval(showNextFunFact, 4000);
+		featuredProjectsBubble.addEventListener('click', showNextFeaturedProject);
+		window.setInterval(showNextFeaturedProject, 4000);
 	}
 
 	document.querySelectorAll('.course-item').forEach((item) => {
