@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill of Materials | Dual Axis Barrel Scanner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body light-mode">
+  <div class="page-shell">
+    <header class="site-header glass-card">
+      <a href="index.html" class="brand" aria-label="Reina Servano home">
+        <img src="kodai_sacabambaspis.png" alt="Reina Servano logo" class="brand-mark" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span data-ja="ホーム">Home</span></a>
+        <a href="about.html"><span data-ja="概要">About</span></a>
+        <a href="projects.html"><span data-ja="作品">Projects</span></a>
+        <a href="blog.html"><span data-ja="ブログ">Blog</span></a>
+      </nav>
+
+      <button class="theme-toggle interactive-btn px-4 py-2 text-xs font-semibold" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" aria-label="Switch to Japanese" title="Switch to Japanese"><span class="language-option is-active">EN</span><span class="language-option">JP</span></button>
+    </header>
+
+    <main class="page-main project-detail-page">
+      <article class="glass-card project-detail-card">
+        <a href="projects.html" class="inline-block mb-6 text-sm font-semibold" data-ja="← プロジェクト一覧へ">← Back to Projects</a>
+        
+        <h1 class="project-detail-title mb-6" data-ja="部品表 (BOM)">Bill of Materials</h1>
+
+        <div class="overflow-x-auto rounded-lg border border-gray-200/20">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-indigo-600/10 border-b border-gray-200/20 font-semibold">
+              <tr>
+                <th scope="col" class="p-3" data-ja="コンポーネント">Component</th>
+                <th scope="col" class="p-3" data-ja="説明">Description</th>
+                <th scope="col" class="p-3" data-ja="サプライヤー">Supplier</th>
+                <th scope="col" class="p-3" data-ja="リンク">Link</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200/10">
+              <tr>
+                <td class="p-3 font-medium">Three Prong Power Cord</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">MDR-100-24</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">FAZ-B2-1-SP</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">STEPPERMOTORS iDM57-RS23</td>
+                <td class="p-3 text-subtext">NEMA 23, RS485 Modbus</td>
+                <td class="p-3 text-subtext">Stepper</td>
+                <td class="p-3"><a href="https://www.omc-stepperonline.com/idm-series-nema-23-integrated-rs485-stepper-motor-2-3nm-325-71oz-in-20-50vdc-idm57-rs23" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">STEPPERMOTORS ESS17-RS04</td>
+                <td class="p-3 text-subtext">NEMA 17, RS485 Closed-Loop</td>
+                <td class="p-3 text-subtext">Stepper</td>
+                <td class="p-3"><a href="https://www.omc-stepperonline.com/ess-series-0-48nm-68-00oz-in-nema-17-integrated-rs485-closed-loop-stepper-servo-motor-24vdc-1000ppr-ess17-rs04" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Beelink SER5 Pro Mini PC</td>
+                <td class="p-3 text-subtext">AMD Ryzen 5 5625U, 16GB DDR4, 480GB SSD, Radeon Vega 7, WiFi 6, BT 5.4, Triple Display</td>
+                <td class="p-3 text-subtext">Amazon</td>
+                <td class="p-3"><a href="https://www.amazon.com/dp/B0D6G965BC?lv=shuf&amp;channelId=500&amp;plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">StarTech.com ST4300USBM — Rugged, Bus Powered</td>
+                <td class="p-3 text-subtext">Industrial USB 3.0 Hub, 4-Port, Mountable, Metal</td>
+                <td class="p-3 text-subtext">Amazon</td>
+                <td class="p-3"><a href="https://www.amazon.com/dp/B004C3W25M?lv=shuf&amp;channelId=500&amp;plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">DSD TECH SH-U11G</td>
+                <td class="p-3 text-subtext">Galvanically Isolated USB-to-RS485 Adapter</td>
+                <td class="p-3 text-subtext">Amazon</td>
+                <td class="p-3"><a href="https://www.amazon.com/dp/B08DHB3S6N?lv=shuf&amp;channelId=500&amp;plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Modbus RTU PWM Output 4CH</td>
+                <td class="p-3 text-subtext">Industrial 4-Ch PWM Output Module, Modbus RTU Protocol, Isolated RS485 Interface, Adjustable Frequency and Duty Cycle, With Various Isolation And Protection Circuits</td>
+                <td class="p-3 text-subtext">WaveShare</td>
+                <td class="p-3"><a href="https://docs.waveshare.com/Modbus_RTU_PWM_Output_4CH" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">XY-MOS</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">N/A</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">TMH 3/4 Inch Mini White Light 3 LED</td>
+                <td class="p-3 text-subtext">TMH 3/4 Inch Mini White Light 3 LED with Connector Plug Clearance Markers Side Marker Indicator Lights Mini Round Front Rear with Grommet for Truck Trailer Lorry Bus 12V DC (Pack of 20)</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3"><a href="https://www.amazon.com/dp/B0DJGQ9P89?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Elecrow 10.1" Touchscreen Monitor</td>
+                <td class="p-3 text-subtext">10.1" IPS 1280×800, Capacitive Touch, HDMI + USB, with Stand</td>
+                <td class="p-3 text-subtext">Amazon</td>
+                <td class="p-3"><a href="https://www.amazon.com/dp/B0BHHQLKPY?lv=shuf&amp;channelId=500&amp;plpRedirect=mhFallback" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Creality CR-Scan Ferret SE</td>
+                <td class="p-3 text-subtext">N/A</td>
+                <td class="p-3 text-subtext">Creality</td>
+                <td class="p-3"><a href="https://store.creality.com/products/cr-scan-ferret-se-3d-scanner" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:underline" data-ja="リンク">Link</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
