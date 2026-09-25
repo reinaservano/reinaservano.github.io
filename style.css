@@ -841,8 +841,13 @@ button,
 
   .site-header {
     flex-wrap: wrap;
-    padding: 12px 14px;
+    gap: 6px;
+    padding: 8px 10px;
     margin-bottom: 18px;
+  }
+
+  .brand {
+    flex-basis: 100%;
   }
 
   .brand-mark {
@@ -851,20 +856,21 @@ button,
   }
 
   .site-nav {
-    width: 100%;
-    justify-content: center;
-    gap: 8px;
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    gap: 2px;
   }
 
   .site-nav a,
   .site-nav button {
-    min-height: 36px;
-    padding: 8px 12px;
+    min-height: 32px;
+    padding: 6px 5px;
   }
 
   .theme-toggle {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
 
   .site-footer {
