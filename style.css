@@ -829,6 +829,10 @@ button,
 }
 
 @media (max-width: 860px) {
+  .page-shell {
+    margin-top: 10px;
+  }
+
   .work-grid,
   .about-hero,
   .info-grid {
@@ -837,11 +841,30 @@ button,
 
   .site-header {
     flex-wrap: wrap;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
   }
 
   .site-nav {
     width: 100%;
     justify-content: center;
+    gap: 8px;
+  }
+
+  .site-nav a,
+  .site-nav button {
+    min-height: 36px;
+    padding: 8px 12px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
   }
 
   .site-footer {
